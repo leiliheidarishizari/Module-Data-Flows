@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Book Library</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 p-8 bg-gradient-to-r from-indigo-100">
+    <h1 class="text-8xl font-bold mb-4">My Book Library</h1>
+
+    <form id="add-book" class="bg-white p-4 rounded-lg shadow-md max-w-2xl">
+      <div class="mb-4">
+        <label for="titleInput" class="block font-bold">Title:</label>
+        <input
+          id="titleInput"
+          type="text"
+          name="titleInput"
+          class="border p-2 w-full"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="authorInput" class="block font-bold">Author:</label>
+        <input
+          id="authorInput"
+          type="text"
+          name="authorInput"
+          class="border p-2 w-full"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="pagesInput" class="block font-bold">Pages:</label>
+        <input
+          id="pagesInput"
+          type="number"
+          name="pagesInput"
+          class="border p-2 w-full"
+          min="1"
+          required
+        />
+      </div>
+
+      <div class="flex items-center mb-4">
+        <input id="readInput" name="readInput" type="checkbox" class="mr-2" />
+        <label for="readInput">Read</label>
+      </div>
+
+      <button
+        type="submit"
+        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+      >
+        Add Book
+      </button>
+    </form>
+
+    <table class="bg-white rounded-lg shadow-md mt-8 w-full">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Pages</th>
+          <th>Read</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <template id="book-row" class="max-w-3xl">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </template>
+    </table>
+
+    <script>
+      const bookRowTemplate = document.getElementById('book-row');
+      const bookTable = document.querySelector('table');
+
+      const addBookForm = document.getElementById('add-book');
+      const titleInput = document.getElementById('titleInput');
+      const authorInput = document.getElementById('authorInput');
+      const pagesInput = document.getElementById('pagesInput');
+      const readInput = document.getElementById('readInput');
+
+      const books = [];
+
+      function addBook(e) {
+        e.preventDefault();
+
+        const book = {
+          title: titleInput.value,
+    </script>
+  </body>
+</html>
