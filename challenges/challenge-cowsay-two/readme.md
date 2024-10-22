@@ -1,10 +1,24 @@
 # Cowsay
 
-Do you remember [Cowsay](https://github.com/CodeYourFuture/JavaScript-Core-1-Challenges)? We learned about node packages and made a cow say stuff. Now, we know more about programming, let's figure out how to make a cow say things in Node by ourselves.
+Cowsay is a fun script that prints an [ASCII](https://simple.wikipedia.org/wiki/ASCII) cow with your words in a speech bubble. It works like this: there is a library of pictures of cows made out of ASCII characters. You call the script in your terminal and you pass in arguments. There are lots of options, but one argument is required: a text string for the cow to say.
+
+```
+ ________
+< Mooooo >
+ --------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+```
+
+Cowsay was originally written in [Perl](https://simple.wikipedia.org/wiki/Perl), but has been written in many other programming languages too. In this coursework, we will write it in JavaScript.
 
 ## Project
 
-For this project we don't need a package, a library or lots of options. Let's just get our own cow printing out and saying whatever we write in the command line. What would be helpful? I think we need to:
+Let's get one cow printing out and saying whatever we write in the command line. What would be helpful? I think we need to:
 
 - [Accept an argument](https://nodejs.dev/learn/nodejs-accept-arguments-from-the-command-line) from the command line.
 - Output to the command line. You've already done this with console.log.
