@@ -2,8 +2,6 @@
 
 ![Screenshot](assets/meteoropolis.png)
 
-[Click here for live demo](https://mini-weatherapp.herokuapp.com/)
-
 This app blends data from [openweathermap.org](https://openweathermap.org/) and
 [Unsplash](https://unsplash.com/developers) to create a visual depiction of the current weather in your area.
 
