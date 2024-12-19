@@ -95,9 +95,10 @@ function render() {
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
     delBut.innerHTML = "Delete";
-    delBut.addEventListener("clicks", function () {
+    // Corrected the event listener name
+    delBut.addEventListener("click", function () {  // Changed "clicks" to "click"
       alert(`You've deleted title: ${myLibrary[i].title}`);
-      myLibrary.splice(i, 1);
+      myLibrary.splice(i, 1); // Remove book from library
       render();
     });
   }
