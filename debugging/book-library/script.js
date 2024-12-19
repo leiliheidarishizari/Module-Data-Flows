@@ -46,7 +46,7 @@ function Book(title, author, pages, check) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.check = check;
+  this.read = check;  // Changed `check` to `read` for clarity
 }
 
 function render() {
