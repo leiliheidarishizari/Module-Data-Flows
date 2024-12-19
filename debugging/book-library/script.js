@@ -81,7 +81,8 @@ function render() {
     } else {
       readStatus = "No";
     }
-    changeBut.innerHTML = readStatus;
+     // Set the read status in the button
+    changeBut.innerHTML = myLibrary[i].read ? "Read" : "Not Read";  // Changed to correctly display "Read" or "Not Read"
 
     changeBut.addEventListener("click", function () {
       myLibrary[i].check = !myLibrary[i].check;
