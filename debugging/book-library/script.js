@@ -29,22 +29,36 @@ document.querySelector(".btn-primary").addEventListener("click", function (e) {
 
 // Check if input is valid and then add the book
 function submit() {
-  // Validate inputs
+  // Validate inputs to ensure values are not null/undefined and not empty
   if (
-    title.value.trim() === "" ||  // Check for empty title
-    author.value.trim() === "" || // Check for empty author
-    pages.value.trim() === ""     // Check for empty pages
+    !title.value || title.value.trim() === "" ||    // Check for null/empty title
+    !author.value || author.value.trim() === "" || // Check for null/empty author
+    !pages.value || pages.value.trim() === ""      // Check for null/empty pages
   ) {
     alert("Please fill all fields!");
     return false;
-  } else {
-    // Corrected to add author and title properly
-    let book = new Book(title.value, author.value, pages.value, check.checked);
-    myLibrary.push(book);  // Push to myLibrary, not library
-    render();
-    resetForm(); // Reset the form after adding the book
   }
+
+  // Create a new book instance
+  const book = new Book(
+    title.value.trim(),
+    author.value.trim(),
+    pages.value.trim(),
+    check.checked // Assuming `check` is a checkbox for read/unread
+  );
+
+  // Add the book to the library
+  myLibrary.push(book);
+
+  // Render the updated library
+  render();
+
+  // Reset the form after adding the book
+  resetForm();
+
+  return true; // Indicate success
 }
+
 
 // Book constructor function
 function Book(title, author, pages, check) {
