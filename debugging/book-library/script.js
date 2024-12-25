@@ -19,7 +19,7 @@ function populateStorage() {
 const title = document.getElementById("title");
 const author = document.getElementById("author");
 const pages = document.getElementById("pages");
-const check = document.getElementById("check");
+const read = document.getElementById("check"); // Renamed 'check' to 'read'
 
 // Add event listener to the Submit button
 document.querySelector(".btn-primary").addEventListener("click", function (e) {
@@ -44,7 +44,7 @@ function submit() {
     title.value.trim(),
     author.value.trim(),
     pages.value.trim(),
-    check.checked // Assuming `check` is a checkbox for read/unread
+    read.checked // Renamed 'check' to 'read'
   );
 
   // Add the book to the library
@@ -61,11 +61,11 @@ function submit() {
 
 
 // Book constructor function
-function Book(title, author, pages, check) {
+function Book(title, author, pages, read) { // Renamed 'check' to 'read'
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.read = check;  // Renamed 'check' to 'read' for clarity
+  this.read = read;  // Renamed 'check' to 'read' for clarity
 }
 
 // Render the table with books
@@ -127,6 +127,5 @@ function resetForm() {
   title.value = "";    // Clear title input
   author.value = "";   // Clear author input
   pages.value = "";    // Clear pages input
-  check.checked = false; // Reset the checkbox
+  read.checked = false; // Reset the checkbox
 }
-
