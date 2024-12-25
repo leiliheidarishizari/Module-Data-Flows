@@ -83,6 +83,6 @@ console.log("Teachers with Pets:");
 hogwarts.forEach(({firstName, lastName, pet, occupation}) =>{
 
   if (occupation === "Teacher" && pet) {
-    console.log(`${firstName} ,${lastName}`);
+    console.log(`${firstName} , ${lastName}`);
   }
 });
