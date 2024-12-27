@@ -72,10 +72,10 @@ let hogwarts = [
 ];
 //Answer/Task-1
 console.log("Gryffindor House Members:");
-hogwarts.forEach(({firstName, lastName, house}) =>{
+hogwarts.forEach(({firstName, lastName, house}) => {
 
   if (house === "Gryffindor") {
-    console.log(`${firstName} ,${lastName}`);
+    console.log(`${firstName}, ${lastName}`);
   }
 });
 //Answer/Task-2
