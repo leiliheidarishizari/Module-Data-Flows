@@ -31,14 +31,13 @@ document.querySelector(".btn-primary").addEventListener("click", function (e) {
 function submit() {
   // Validate inputs to ensure values are not null/undefined and not empty
   if (
-    !title.value || title.value.trim() === "" ||    // Check for null/empty title
-    !author.value || author.value.trim() === "" || // Check for null/empty author
-    !pages.value || pages.value.trim() === ""      // Check for null/empty pages
+    !title.value.trim() ||  // Check for null/empty title
+    !author.value.trim() || // Check for null/empty author
+    !pages.value.trim()     // Check for null/empty pages
   ) {
     alert("Please fill all fields!");
     return false;
   }
-
   // Create a new book instance
   const book = new Book(
     title.value.trim(),
